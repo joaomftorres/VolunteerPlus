@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Volunteer+</string>
+    <string name="textViewWelcome">Bem vindo ao</string>
+    <string name="loginbutton">Entrar</string>
+    <string name="registerbutton">Registar</string>
+    <string name="loginbutton2">Entrar</string>
+    <string name="registerbutton2">Registar</string>
+    <string name="emailhint">Introduza o seu Email</string>
+    <string name="passwordhint">Palavra-Passe</string>
+    <string name="namehint">Nome</string>
+    <string name="buttonvoltar">Voltar</string>
+    <string name="volunteerbutton">Login Voluntário</string>
+    <string name="instbutton">Login Instituição</string>
+    <string name="loginbutton3">Entrar</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Abrir Barra de Navegação</string>
+    <string name="navigation_drawer_close">Fechar Barra de Navegação</string>
+    <string name="new_action">Proponha uma nova Ação</string>
+    <string name="editTextNomeAcao">Nome da Ação</string>
+    <string name="editTextDescricao">Descrição da Ação</string>
+    <string name="buttonpropor">Propor Ação</string>
+    <string name="editTextObjetivos">Objetivos da Ação</string>
+    <string name="editTextResultadosEsperados">Resultados Esperados</string>
+    <string name="textViewInscrever">Não tem uma conta? Inscreva-se já!</string>
+
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_activity_voluntario">ActivityVoluntario</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string-array name="Categorias">
+        <item>Oceanos</item>
+        <item>Ação Social</item>
+        <item>Saúde</item>
+        <item>Preservação da Natureza</item>
+        <item>Doações</item>
+    </string-array>
+    <string-array name="TipodeConta">
+        <item>Voluntário</item>
+        <item>Instituição</item>
+    </string-array>
+
+</resources>

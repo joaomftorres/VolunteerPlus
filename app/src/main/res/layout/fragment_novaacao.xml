@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+
+        <Button
+            android:id="@+id/buttonpropor"
+            android:layout_width="168dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="696dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/buttonshape2"
+            android:text="@string/buttonpropor"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/buttonescolherimagem"
+            android:layout_width="168dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/buttonshape2"
+            android:text="Escolher Imagem"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/imageViewAcao"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNomeAcao" />
+
+        <EditText
+            android:id="@+id/editTextObjetivos"
+            android:layout_width="291dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_edittext2"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/editTextObjetivos"
+            android:inputType="textMultiLine"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#848794"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <EditText
+            android:id="@+id/editTextLink"
+            android:layout_width="291dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edittext2"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Página da Ação"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#848794"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextInstituicaoResposavel" />
+
+        <EditText
+            android:id="@+id/editTextResultadosEsperados"
+            android:layout_width="291dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/custom_edittext2"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="@string/editTextResultadosEsperados"
+            android:inputType="textMultiLine"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#848794"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextObjetivos" />
+
+        <EditText
+            android:id="@+id/editTextInstituicaoResposavel"
+            android:layout_width="291dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edittext2"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Instituição Responsável"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#848794"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextResultadosEsperados" />
+
+        <EditText
+            android:id="@+id/editTextNomeAcao"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edittext2"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/editTextNomeAcao"
+            android:paddingStart="12dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#848794"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageViewAcao"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <ImageView
+            android:id="@+id/imageViewAcao"
+            android:layout_width="127dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="23dp"
+            app:layout_constraintEnd_toStartOf="@+id/editTextNomeAcao"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:srcCompat="@drawable/ic_addphoto" />
+
+        <Spinner
+            android:id="@+id/spinnercategorias"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edittext2"
+            android:paddingStart="12dp"
+            android:paddingLeft="12dp"
+            android:textColor="@color/colorPrimary"
+            android:tooltipText="Categoria"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLink" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/new_action"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewLogged"
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="45dp"
+            android:text="Ação proposta por: "
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="3dp"
+            android:layout_marginTop="28dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewAcao"
+            tools:layout_editor_absoluteX="0dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
