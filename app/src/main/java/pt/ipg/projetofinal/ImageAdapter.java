@@ -85,7 +85,9 @@ class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ImageViewHolder> im
                 String filterPattern = constraint.toString().toLowerCase().trim();
 
                 for (AcoesVoluntariado item : mUploadsListFull) {
-                    if( item.getCategoria().toLowerCase().contains(filterPattern)){
+                    if( item.getCategoria().toLowerCase().contains(filterPattern) ||
+                            item.getNome().toLowerCase().contains(filterPattern) ||
+                            item.getResponsavel().toLowerCase().contains(filterPattern)){
                         filteredList.add(item);
                     }
                 }

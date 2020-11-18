@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityAcoes extends AppCompatActivity {
+public class OceanosActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
     private ImageAdapter mAdapter;
@@ -32,7 +32,7 @@ public class ActivityAcoes extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_acoes);
+        setContentView(R.layout.activity_oceanos);
 
         mRecyclerView = findViewById(R.id.recyclerviewacoes);
         mRecyclerView.setHasFixedSize(true);
@@ -48,22 +48,23 @@ public class ActivityAcoes extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()){
                     AcoesVoluntariado upload = postSnapshot.getValue(AcoesVoluntariado.class);
-                    mUploads.add(upload);
+                    if(upload.getCategoria().equals("Oceanos")){
+                    mUploads.add(upload); }
                 }
 
-                mAdapter = new ImageAdapter(ActivityAcoes.this, mUploads);
+                mAdapter = new ImageAdapter(OceanosActivity.this, mUploads);
 
                 mRecyclerView.setAdapter(mAdapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(ActivityAcoes.this,"Erro", Toast.LENGTH_SHORT).show();
+                Toast.makeText(OceanosActivity.this,"Erro", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
@@ -86,5 +87,5 @@ public class ActivityAcoes extends AppCompatActivity {
             }
         });
         return true;
-    }
+    }*/
 }

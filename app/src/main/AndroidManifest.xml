@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityAcoes"></activity>
+        <activity android:name=".OceanosActivity"></activity>
+        <activity android:name=".ActivityAcoes" />
         <activity
             android:name=".InstitutionActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />

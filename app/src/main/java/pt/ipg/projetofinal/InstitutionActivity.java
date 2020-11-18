@@ -58,51 +58,10 @@ public class InstitutionActivity extends AppCompatActivity implements Navigation
 
         Intent i = getIntent();
         String text = i.getStringExtra ( "User");
-        /*teste = (TextView) findViewById(R.id.teste);
-        teste.setText(text);*/
-
         myString = text;
 
         getMyData();
-        /*Bundle bundle = new Bundle();
-        bundle.putString("Username", text);
-        NovaAcaoFragment nova = new NovaAcaoFragment();
-        nova.setArguments(bundle);*/
 
-
-
-
-        /*Bundle bundle = new Bundle();
-        bundle.putString("User", text);
-        NovaAcaoFragment nova = new NovaAcaoFragment();
-        nova.setArguments(bundle);*/
-
-
-       /*AcoesVoluntariado acoes = new AcoesVoluntariado();
-       acoes.setNome("aaaaa");
-       acoes.setDescricao("bbbb");
-       acoes.setResultadosEsperados("cccc");
-
-       referencia.child("acoes").setValue(acoes);*/
-
-        /*editTextNomeAcao = (EditText) findViewById(R.id.editTextNomeAcao);
-        editTextObjetivos = (EditText) findViewById(R.id.editTextObjetivos);
-        editTextResultadosEsperados = (EditText) findViewById(R.id.editTextResultadosEsperados);*/
-
-
-        /*acoes = new AcoesVoluntariado();
-
-        referencia = FirebaseDatabase.getInstance().getReference().child("Ações de Voluntariado");
-
-        buttonpropor.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                acoes.setNome(editTextNomeAcao.getText().toString().trim());
-                acoes.setObjetivos(editTextObjetivos.getText().toString().trim());
-                acoes.setResultadosEsperados(editTextResultadosEsperados.getText().toString().trim());
-                referencia.push().setValue(acoes);
-            }
-        });*/
 
     }
 

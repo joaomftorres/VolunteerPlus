@@ -76,8 +76,8 @@ class AcoesVoluntariado {
         return UserLogado;
     }
 
-    public void setUserLogado(String user) {
-        UserLogado = user;
+    public void setUserLogado(String userLogado) {
+        UserLogado = userLogado;
     }
 
     public String getLink() {

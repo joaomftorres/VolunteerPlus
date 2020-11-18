@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class VolunteerActivity extends AppCompatActivity {
 
-    private Button acoes;
+    private Button acoes, oceanos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +20,20 @@ public class VolunteerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_volunteer);
 
         acoes = (Button) findViewById(R.id.buttonacoes);
+        oceanos = (Button) findViewById(R.id.buttonoceanos);
 
 
         acoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), ActivityAcoes.class));
+            }
+        });
+
+        oceanos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), OceanosActivity.class));
             }
         });
 

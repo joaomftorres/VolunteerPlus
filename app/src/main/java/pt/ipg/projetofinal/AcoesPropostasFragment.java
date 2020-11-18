@@ -31,8 +31,7 @@ public class AcoesPropostasFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_acoespropostas, container, false);
-
+        final View view = inflater.inflate(R.layout.fragment_acoespropostas, container, false);
 
         mRecyclerView = view.findViewById(R.id.recyclerviewpropostas);
         mRecyclerView.setHasFixedSize(true);
@@ -40,7 +39,11 @@ public class AcoesPropostasFragment extends Fragment {
 
         mUploads = new ArrayList<>();
 
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Ações");
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("Ações");
+
+        InstitutionActivity activity = (InstitutionActivity) getActivity();
+        final String user = activity.getMyData();
+        //Toast.makeText(getContext(), user, Toast.LENGTH_SHORT).show();
 
 
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
@@ -48,7 +51,8 @@ public class AcoesPropostasFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()){
                     AcoesVoluntariado upload = postSnapshot.getValue(AcoesVoluntariado.class);
-                    mUploads.add(upload);
+                    if(upload.getUserLogado().equals(user)){
+                    mUploads.add(upload); }
                 }
 
                 mAdapter = new ImageAdapter(getContext(), mUploads);
