@@ -9,7 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OceanosActivity"></activity>
+        <activity android:name=".ods.ods17Activity" />
+        <activity android:name=".ods.ods16Activity" />
+        <activity android:name=".ods.ods15Activity" />
+        <activity android:name=".ods.ods14Activity" />
+        <activity android:name=".ods.ods13Activity" />
+        <activity android:name=".ods.ods12Activity" />
+        <activity android:name=".ods.ods11Activity" />
+        <activity android:name=".ods.ods10Activity" />
+        <activity android:name=".ods.ods9Activity" />
+        <activity android:name=".ods.ods8Activity" />
+        <activity android:name=".ods.ods7Activity" />
+        <activity android:name=".ods.ods6Activity" />
+        <activity android:name=".ods.ods5Activity" />
+        <activity android:name=".ods.ods4Activity" />
+        <activity android:name=".ods.ods3Activity" />
+        <activity android:name=".ods.ods2Activity" />
+        <activity android:name=".ods.ods1Activity" />
+        <activity android:name=".VerInfoAcaoActivity" />
+        <activity android:name=".ActivityODS" />
+        <activity android:name=".OceanosActivity" />
         <activity android:name=".ActivityAcoes" />
         <activity
             android:name=".InstitutionActivity"

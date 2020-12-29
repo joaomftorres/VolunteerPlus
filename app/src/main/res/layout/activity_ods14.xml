@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ods.ods14Activity">
+
+    <Button
+        android:id="@+id/buttonsabermais14"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/buttonshapeods14"
+        android:text="@string/sabermais"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="match_parent"
+        android:layout_height="175sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ods14large"
+        tools:layout_editor_absoluteX="22dp" />
+
+    <TextView
+        android:id="@+id/textViewods144"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#46a0e0"
+        android:text=" Minimizar e enfrentar os impactos da acidificação dos oceanos, inclusive através do reforço da cooperação científica em todos os níveis"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods142" />
+
+    <TextView
+        android:id="@+id/textViewods141"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:drawableTint="#e84d00"
+        android:text="@string/objetivosprincipais"
+        android:textColor="#46a0e0"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+
+    <TextView
+        android:id="@+id/textViewods143"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#46a0e0"
+        android:text="Prevenir e reduzir significativamente a poluição marítima de todos os tipos"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods141" />
+
+    <TextView
+        android:id="@+id/textViewods142"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#46a0e0"
+        android:text="Gerir de forma sustentável e proteger os ecossistemas marinhos e costeiros para evitar impactos adversos significativos"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods143" />
+</androidx.constraintlayout.widget.ConstraintLayout>

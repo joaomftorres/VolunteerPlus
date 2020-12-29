@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ods.ods15Activity">
+
+    <Button
+        android:id="@+id/buttonsabermais15"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/buttonshapeods15"
+        android:text="@string/sabermais"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="match_parent"
+        android:layout_height="175sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ods15large"
+        tools:layout_editor_absoluteX="134dp" />
+
+    <TextView
+        android:id="@+id/textViewods91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:drawableTint="#e84d00"
+        android:text="@string/objetivosprincipais"
+        android:textColor="#26c94f"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <TextView
+        android:id="@+id/textViewods92"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#26c94f"
+        android:text="Assegurar a conservação, recuperação e uso sustentável de ecossistemas terrestres e de água doce interior e os seus serviços"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods91" />
+
+    <TextView
+        android:id="@+id/textViewods93"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#26c94f"
+        android:text="combater a desertificação, restaurar a terra e o solo degradados, incluindo terrenos afetados pela desertificação, secas e inundações, e lutar para alcançar um mundo neutro em termos de degradação do solo"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods92" />
+
+    <TextView
+        android:id="@+id/textViewods94"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#26c94f"
+        android:text="Tomar medidas urgentes e significativas para reduzir a degradação de habitat naturais"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods93" />
+</androidx.constraintlayout.widget.ConstraintLayout>

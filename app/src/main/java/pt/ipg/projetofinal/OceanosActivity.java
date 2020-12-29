@@ -2,15 +2,25 @@ package pt.ipg.projetofinal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.transition.AutoTransition;
+import android.transition.TransitionManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,13 +29,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class OceanosActivity extends AppCompatActivity {
 
+
     private RecyclerView mRecyclerView;
-    private ImageAdapter mAdapter;
+    private AdapterVer mAdapter;
     private DatabaseReference mDatabaseRef;
     private List<AcoesVoluntariado> mUploads;
 
@@ -38,21 +50,24 @@ public class OceanosActivity extends AppCompatActivity {
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+
         mUploads = new ArrayList<>();
 
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Ações");
-
 
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()){
                     AcoesVoluntariado upload = postSnapshot.getValue(AcoesVoluntariado.class);
+
                     if(upload.getCategoria().equals("Oceanos")){
                     mUploads.add(upload); }
+
+
                 }
 
-                mAdapter = new ImageAdapter(OceanosActivity.this, mUploads);
+                mAdapter = new AdapterVer(OceanosActivity.this, mUploads, this);
 
                 mRecyclerView.setAdapter(mAdapter);
             }
@@ -62,9 +77,32 @@ public class OceanosActivity extends AppCompatActivity {
                 Toast.makeText(OceanosActivity.this,"Erro", Toast.LENGTH_SHORT).show();
             }
         });
+
+        /*mRecyclerView.addOnItemTouchListener(
+                new RecyclerItemClickListener(getApplicationContext(), mRecyclerView,
+                        new RecyclerItemClickListener.OnItemClickListener() {
+                            @Override
+                            public void onItemClick(View view, int position) {
+                                *//*AcoesVoluntariado acaoselecionada = mUploads.get(position);*//*
+
+                                *//*Intent intent = new Intent(getApplicationContext(), VerInfoAcaoActivity.class);
+                                intent.putExtra(ACAO_SELECIONADA, acaoselecionada);
+                                startActivity(intent);*//*
+
+                                Toast.makeText(getApplicationContext(), position, Toast.LENGTH_LONG).show();
+                            }
+                            @Override
+                            public void onLongItemClick(View view, int position) {
+                            }
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                            }
+                        })
+        );*/
     }
 
-    /*@Override
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.search_menu, menu);
@@ -87,5 +125,6 @@ public class OceanosActivity extends AppCompatActivity {
             }
         });
         return true;
-    }*/
+    }
+
 }

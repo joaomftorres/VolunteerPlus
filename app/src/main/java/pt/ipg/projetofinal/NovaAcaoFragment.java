@@ -44,7 +44,7 @@ public class NovaAcaoFragment extends Fragment implements AdapterView.OnItemSele
     private Button buttonpropor;
     private Button buttonescolherimagem;
     private Uri mImageUri;
-    private EditText editTextNomeAcao, editTextObjetivos, editTextResultadosEsperados, editTextResponsavel, editTextLink;
+    private EditText editTextNomeAcao, editTextObjetivos, editTextResultadosEsperados, editTextResponsavel, editTextLink, edittextContacto, editTextHorario, editTextLinkInst, editTextLocal;
     AcoesVoluntariado acoes;
     private ImageView mImageView;
     private TextView user;
@@ -62,13 +62,16 @@ public class NovaAcaoFragment extends Fragment implements AdapterView.OnItemSele
         editTextObjetivos = (EditText) view.findViewById(R.id.editTextObjetivos);
         editTextResultadosEsperados = (EditText) view.findViewById(R.id.editTextResultadosEsperados);
         editTextResponsavel = (EditText) view.findViewById(R.id.editTextInstituicaoResposavel);
+        edittextContacto = (EditText) view.findViewById(R.id.editTextContactos);
+        editTextHorario = (EditText) view.findViewById(R.id.editTextHorarios);
         buttonpropor = (Button) view.findViewById(R.id.buttonpropor);
         buttonescolherimagem = (Button) view.findViewById(R.id.buttonescolherimagem);
         spinner = (Spinner) view.findViewById(R.id.spinnercategorias);
         mImageView = (ImageView) view.findViewById(R.id.imageViewAcao);
         user = (TextView) view.findViewById(R.id.textViewLogged);
         editTextLink = (EditText) view.findViewById(R.id.editTextLink);
-
+        editTextLinkInst = (EditText) view.findViewById(R.id.editTextLinkInst);
+        editTextLocal = (EditText) view.findViewById(R.id.editTextLocal);
 
         Folder = FirebaseStorage.getInstance().getReference().child("ImageFolder");
 
@@ -100,9 +103,18 @@ public class NovaAcaoFragment extends Fragment implements AdapterView.OnItemSele
                 acoes.setResultadosEsperados(editTextResultadosEsperados.getText().toString().trim());
                 acoes.setCategoria(spinner.getSelectedItem().toString());
                 acoes.setResponsavel(editTextResponsavel.getText().toString().trim());
-                acoes.setLink(editTextLink.getText().toString().trim());
+                acoes.setLink("https://" + editTextLink.getText().toString().trim());
+                acoes.setLinkInst("https://" + editTextLinkInst.getText().toString().trim());
                 acoes.setUserLogado(user.getText().toString().trim());
+                acoes.setContactos(edittextContacto.getText().toString().trim());
+                acoes.setHorario(editTextHorario.getText().toString().trim());
+                acoes.setLocal(editTextLocal.getText().toString().trim());
+                acoes.setEstado("A decorrer");
+                String key;
+                key = referencia.push().getKey();
+                acoes.setId(key);
                 referencia.push().setValue(acoes);
+
 
                 Toast.makeText(NovaAcaoFragment.this.getActivity(), "Ação Proposta com Sucesso", Toast.LENGTH_LONG).show();
             }

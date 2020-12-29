@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ods.ods16Activity">
+
+    <Button
+        android:id="@+id/buttonsabermais16"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/buttonshapeods16"
+        android:text="@string/sabermais"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="match_parent"
+        android:layout_height="175sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ods16large"
+        tools:layout_editor_absoluteX="34dp" />
+
+    <TextView
+        android:id="@+id/textViewods94"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#3963cc"
+        android:text=" Promover o Estado de Direito, ao nível nacional e internacional, e garantir a igualdade de acesso à justiça para todos"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods93" />
+
+    <TextView
+        android:id="@+id/textViewods92"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#3963cc"
+        android:text="Reduzir significativamente todas as formas de violência e as taxas de mortalidade com ela relacionadas"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods91" />
+
+    <TextView
+        android:id="@+id/textViewods93"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#3963cc"
+        android:text="Acabar com o abuso, exploração, tráfico e todas as formas de violência e tortura contra as crianças"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods92" />
+
+    <TextView
+        android:id="@+id/textViewods91"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:drawableTint="#e84d00"
+        android:text="@string/objetivosprincipais"
+        android:textColor="#3963cc"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+</androidx.constraintlayout.widget.ConstraintLayout>

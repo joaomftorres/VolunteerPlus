@@ -2,10 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/faqmenu"
-        android:title="Sobre" />
+    <item android:id="@+id/logout"
+        android:title="Logout"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_logout"/>
 
-    <item android:id="@+id/sairmenu"
+    <item android:id="@+id/sair"
         android:title="Sair"
-        app:showAsAction="never" />
+        app:showAsAction="never"
+        android:icon="@drawable/ic_exit" />
+
 </menu>

@@ -4,26 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VolunteerActivity">
+    tools:context=".VolunteerActivity"
+    android:background="#FFFFFF">
 
+    <Button
+        android:id="@+id/buttonods"
+        android:layout_width="225dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="132dp"
+        android:background="@drawable/buttonshape"
+        android:drawableLeft="@drawable/ic_eco"
+        android:drawableTint="#FFFFFF"
+        android:paddingLeft="12sp"
+        android:paddingRight="12sp"
+        android:text="ODS"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonoceanos" />
+
+    <Button
+        android:id="@+id/buttonacoes2"
+        android:layout_width="225dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="44dp"
+        android:background="@drawable/buttonshape"
+        android:drawableLeft="@drawable/ic_acoes"
+        android:drawableTint="#FFFFFF"
+        android:paddingLeft="12sp"
+        android:paddingRight="12sp"
+        android:text="Outras Ações"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonoceanos" />
+
+    <ImageView
+        android:id="@+id/imageViewVolunteer"
+        android:layout_width="278dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_volunteer" />
 
     <Button
         android:id="@+id/buttonoceanos"
-        android:layout_width="181dp"
+        android:layout_width="225dp"
         android:layout_height="39dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="196dp"
         android:background="@drawable/buttonshape"
         android:text="Oceanos"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawableLeft="@drawable/ic_waves"
+        android:paddingLeft="12sp"
+        android:paddingRight="12sp"
+        android:drawableTint="#FFFFFF"/>
 
     <Button
         android:id="@+id/buttonacoes"
-        android:layout_width="181dp"
+        android:layout_width="225dp"
         android:layout_height="39dp"
         android:layout_marginTop="44dp"
         android:background="@drawable/buttonshape"
@@ -32,6 +80,10 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonoceanos" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonoceanos"
+        android:drawableLeft="@drawable/ic_acoes"
+        android:paddingLeft="12sp"
+        android:paddingRight="12sp"
+        android:drawableTint="#FFFFFF"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

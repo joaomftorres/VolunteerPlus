@@ -11,6 +11,11 @@ class AcoesVoluntariado {
         private String IdAcao;
         private String UserLogado;
         private String Link;
+        private String LinkInst;
+        private String Horario;
+        private String Contactos;
+        private String Estado;
+        private String Local;
 
 
     public AcoesVoluntariado() {
@@ -30,6 +35,30 @@ class AcoesVoluntariado {
 
     public void setImageurl(String imageurl) {
         Imageurl = imageurl;
+    }
+
+    public String getHorario() {
+        return Horario;
+    }
+
+    public void setHorario(String horario) {
+        Horario = horario;
+    }
+
+    public String getEstado() {
+        return Estado;
+    }
+
+    public void setEstado(String estado) {
+        Estado = estado;
+    }
+
+    public String getContactos() {
+        return Contactos;
+    }
+
+    public void setContactos(String contactos) {
+        Contactos = contactos;
     }
 
     public String getNome() {
@@ -86,6 +115,22 @@ class AcoesVoluntariado {
 
     public void setLink(String link) {
         Link = link;
+    }
+
+    public String getLinkInst() {
+        return LinkInst;
+    }
+
+    public void setLinkInst(String linkinst) {
+        LinkInst = linkinst;
+    }
+
+    public String getLocal() {
+        return Local;
+    }
+
+    public void setLocal(String local) {
+        Local = local;
     }
 }
 

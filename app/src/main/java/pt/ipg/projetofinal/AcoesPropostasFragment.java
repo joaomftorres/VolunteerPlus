@@ -17,6 +17,7 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,7 +25,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class AcoesPropostasFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
-    private ImageAdapter mAdapter;
+    private AdapterVer mAdapter;
     private DatabaseReference mDatabaseRef;
     private List<AcoesVoluntariado> mUploads;
 
@@ -43,7 +44,6 @@ public class AcoesPropostasFragment extends Fragment {
 
         InstitutionActivity activity = (InstitutionActivity) getActivity();
         final String user = activity.getMyData();
-        //Toast.makeText(getContext(), user, Toast.LENGTH_SHORT).show();
 
 
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
@@ -52,10 +52,11 @@ public class AcoesPropostasFragment extends Fragment {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()){
                     AcoesVoluntariado upload = postSnapshot.getValue(AcoesVoluntariado.class);
                     if(upload.getUserLogado().equals(user)){
-                    mUploads.add(upload); }
+                    mUploads.add(upload);
+                }
                 }
 
-                mAdapter = new ImageAdapter(getContext(), mUploads);
+                mAdapter = new AdapterVer(getContext(), mUploads, this);
 
                 mRecyclerView.setAdapter(mAdapter);
             }

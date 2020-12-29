@@ -25,7 +25,7 @@ import java.util.List;
 public class ActivityAcoes extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private ImageAdapter mAdapter;
+    private AdapterVer mAdapter;
     private DatabaseReference mDatabaseRef;
     private List<AcoesVoluntariado> mUploads;
 
@@ -42,7 +42,6 @@ public class ActivityAcoes extends AppCompatActivity {
 
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Ações");
 
-
         mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -51,7 +50,7 @@ public class ActivityAcoes extends AppCompatActivity {
                     mUploads.add(upload);
                 }
 
-                mAdapter = new ImageAdapter(ActivityAcoes.this, mUploads);
+                mAdapter = new AdapterVer(ActivityAcoes.this, mUploads, this);
 
                 mRecyclerView.setAdapter(mAdapter);
             }

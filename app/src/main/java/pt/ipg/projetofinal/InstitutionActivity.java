@@ -88,14 +88,14 @@ public class InstitutionActivity extends AppCompatActivity implements Navigation
                 break;
 
             case R.id.nav_Perfil:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new PerfilInstFragment()).commit();
-                break;
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                return true;
 
             case R.id.nav_sair:
-                Toast.makeText(this, "Sair", Toast.LENGTH_SHORT).show();
-                break;
-
+                moveTaskToBack(true);
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(1);
+                return true;
         }
 
         drawer.closeDrawer(GravityCompat.START);
@@ -108,7 +108,23 @@ public class InstitutionActivity extends AppCompatActivity implements Navigation
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+        }
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.logout:
+                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                return true;
+            case R.id.sair:
+                moveTaskToBack(true);
+                android.os.Process.killProcess(android.os.Process.myPid());
+                System.exit(1);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }

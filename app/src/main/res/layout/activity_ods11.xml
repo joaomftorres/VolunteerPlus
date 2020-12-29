@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ods.ods11Activity">
+
+    <Button
+        android:id="@+id/buttonsabermais11"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/buttonshapeods11"
+        android:text="@string/sabermais"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="match_parent"
+        android:layout_height="175sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ods11large"
+        tools:layout_editor_absoluteX="19dp" />
+
+    <TextView
+        android:id="@+id/textViewods114"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#ed9911"
+        android:text="Fortalecer esforços para proteger e salvaguardar o património cultural e natural do mundo"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods113" />
+
+    <TextView
+        android:id="@+id/textViewods111"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:drawableTint="#e84d00"
+        android:text="@string/objetivosprincipais"
+        android:textColor="#ed9911"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+
+    <TextView
+        android:id="@+id/textViewods113"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#ed9911"
+        android:text="Aumentar a urbanização inclusiva e sustentável"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods112" />
+
+    <TextView
+        android:id="@+id/textViewods112"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/ic_arrow"
+        android:drawableTint="#ed9911"
+        android:text="Garantir o acesso de todos à habitação segura, adequada e a preço acessível, e aos serviços básicos, e melhorar as condições nos bairros de lata"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewods111" />
+</androidx.constraintlayout.widget.ConstraintLayout>

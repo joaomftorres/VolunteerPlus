@@ -16,9 +16,9 @@
             android:id="@+id/buttonpropor"
             android:layout_width="168dp"
             android:layout_height="37dp"
-            android:layout_marginTop="696dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginTop="975dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
             android:layout_marginBottom="24dp"
             android:background="@drawable/buttonshape2"
             android:text="@string/buttonpropor"
@@ -26,7 +26,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <Button
             android:id="@+id/buttonescolherimagem"
@@ -75,9 +75,45 @@
             android:textColor="@color/colorPrimary"
             android:textColorHint="#848794"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLocal" />
+
+        <EditText
+            android:id="@+id/editTextLocal"
+            android:layout_width="291dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edittext2"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Local"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#848794"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextInstituicaoResposavel" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextContactos" />
+
+        <EditText
+            android:id="@+id/editTextLinkInst"
+            android:layout_width="291dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edittext2"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Página da Instituição"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#848794"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLink" />
 
         <EditText
             android:id="@+id/editTextResultadosEsperados"
@@ -99,6 +135,26 @@
             app:layout_constraintTop_toBottomOf="@+id/editTextObjetivos" />
 
         <EditText
+            android:id="@+id/editTextHorarios"
+            android:layout_width="291dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edittext2"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Horários"
+            android:inputType="textMultiLine"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#848794"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextInstituicaoResposavel" />
+
+        <EditText
             android:id="@+id/editTextInstituicaoResposavel"
             android:layout_width="291dp"
             android:layout_height="70dp"
@@ -115,6 +171,24 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextResultadosEsperados" />
+
+        <EditText
+            android:id="@+id/editTextContactos"
+            android:layout_width="291dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_edittext2"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Contactos"
+            android:paddingStart="12dp"
+            android:paddingTop="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="#848794"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextHorarios" />
 
         <EditText
             android:id="@+id/editTextNomeAcao"
@@ -155,9 +229,9 @@
             android:textColor="@color/colorPrimary"
             android:tooltipText="Categoria"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextLink" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextLinkInst" />
 
         <TextView
             android:id="@+id/textView5"
