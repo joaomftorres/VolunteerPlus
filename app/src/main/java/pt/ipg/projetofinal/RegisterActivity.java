@@ -63,14 +63,20 @@ public class RegisterActivity extends AppCompatActivity {
                         spinner.getSelectedItem().toString());
 
 
+
+                if(editPassword.length() < 6){
+                    editPassword.setError("Introduza uma Password mais forte.");
+                    return;
+                }
+
                 users.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         if (dataSnapshot.child(user.getUsername()).exists())
-                            Toast.makeText(RegisterActivity.this, "Já existe uma conta com este Nome de Utilizador", Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegisterActivity.this, "Este nome de utilizador já está em utilização!", Toast.LENGTH_LONG).show();
                         else {
                             users.child(user.getUsername()).setValue(user);
-                            Toast.makeText(RegisterActivity.this, "Registado com Sucesso", Toast.LENGTH_LONG).show();
+                            Toast.makeText(RegisterActivity.this, "Registado com Sucesso!", Toast.LENGTH_LONG).show();
                         }
                     }
 

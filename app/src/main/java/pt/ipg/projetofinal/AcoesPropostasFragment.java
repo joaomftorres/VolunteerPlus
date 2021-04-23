@@ -25,7 +25,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class AcoesPropostasFragment extends Fragment {
 
     private RecyclerView mRecyclerView;
-    private AdapterVer mAdapter;
+    private AdapterEditar mAdapter;
     private DatabaseReference mDatabaseRef;
     private List<AcoesVoluntariado> mUploads;
 
@@ -34,7 +34,7 @@ public class AcoesPropostasFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_acoespropostas, container, false);
 
-        mRecyclerView = view.findViewById(R.id.recyclerviewpropostas);
+        /* mRecyclerView = view.findViewById(R.id.recyclerviewpropostas);
         mRecyclerView.setHasFixedSize(true);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
@@ -50,13 +50,14 @@ public class AcoesPropostasFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()){
+                    String key = dataSnapshot.getKey();
                     AcoesVoluntariado upload = postSnapshot.getValue(AcoesVoluntariado.class);
-                    if(upload.getUserLogado().equals(user)){
+                    //if(upload.getUserLogado().equals(user) && upload.getEstado().equals("A decorrer")){
                     mUploads.add(upload);
-                }
+                //}
                 }
 
-                mAdapter = new AdapterVer(getContext(), mUploads, this);
+                mAdapter = new AdapterEditar(getContext(), mUploads, this);
 
                 mRecyclerView.setAdapter(mAdapter);
             }
@@ -67,7 +68,7 @@ public class AcoesPropostasFragment extends Fragment {
             }
         });
 
-
-        return view;
+*/
+        return view; 
     }
 }

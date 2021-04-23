@@ -51,7 +51,7 @@ public class NovaAcaoFragment extends Fragment implements AdapterView.OnItemSele
 
     private Spinner spinner;
 
-    private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
+    private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference().child("Ações");
 
     @Nullable
     @Override
@@ -97,7 +97,6 @@ public class NovaAcaoFragment extends Fragment implements AdapterView.OnItemSele
         buttonpropor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 acoes.setNome(editTextNomeAcao.getText().toString().trim());
                 acoes.setObjetivos(editTextObjetivos.getText().toString().trim());
                 acoes.setResultadosEsperados(editTextResultadosEsperados.getText().toString().trim());
@@ -110,11 +109,21 @@ public class NovaAcaoFragment extends Fragment implements AdapterView.OnItemSele
                 acoes.setHorario(editTextHorario.getText().toString().trim());
                 acoes.setLocal(editTextLocal.getText().toString().trim());
                 acoes.setEstado("A decorrer");
-                String key;
-                key = referencia.push().getKey();
-                acoes.setId(key);
-                referencia.push().setValue(acoes);
 
+                referencia = FirebaseDatabase.getInstance().getReference().child("Ações");
+                DatabaseReference keyRef = referencia.push();
+                String key = keyRef.getKey();
+                acoes.setId(key);
+                keyRef.setValue(acoes);
+
+                //referencia.push().setValue(acoes);
+
+                /*DatabaseReference postsRef = referencia.getParent();
+                DatabaseReference pushedPostRef = postsRef.push();
+                String postId = pushedPostRef.getKey();
+                acoes.setId(postId);*/
+                /*String key = referencia.push().getKey();
+                acoes.setId(key);*/
 
                 Toast.makeText(NovaAcaoFragment.this.getActivity(), "Ação Proposta com Sucesso", Toast.LENGTH_LONG).show();
             }

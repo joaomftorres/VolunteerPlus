@@ -70,7 +70,10 @@ class AdapterEditar extends RecyclerView.Adapter<AdapterEditar.ImageViewHolder> 
                 String pagnext = uploadCurrent.getLink();
                 String pagacnext = uploadCurrent.getLinkInst();
                 String localnext = uploadCurrent.getLocal();
-                /*Intent intent = new Intent(mContext, EditarInfoAcaoActivity.class);
+                String usernext = uploadCurrent.getUserLogado();
+                String estadonext = uploadCurrent.getEstado();
+                String categorianext = uploadCurrent.getCategoria();
+                Intent intent = new Intent(mContext, VerAcaoInst.class);
                 intent.putExtra("Id", idnext);
                 intent.putExtra("Nome", nomenext);
                 intent.putExtra("Url", urlnext);
@@ -82,8 +85,11 @@ class AdapterEditar extends RecyclerView.Adapter<AdapterEditar.ImageViewHolder> 
                 intent.putExtra("Pagina", pagnext);
                 intent.putExtra("Paginaac", pagacnext);
                 intent.putExtra("Local", localnext);
+                intent.putExtra("User", usernext);
+                intent.putExtra("Estado", estadonext);
+                intent.putExtra("Categoria", categorianext);
 
-                mContext.startActivity(intent); */
+                mContext.startActivity(intent);
 
                 //Toast.makeText(mContext, idnext, Toast.LENGTH_SHORT).show();
             }

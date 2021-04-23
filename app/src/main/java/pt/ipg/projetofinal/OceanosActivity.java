@@ -27,6 +27,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.io.Serializable;
@@ -60,11 +61,9 @@ public class OceanosActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()){
                     AcoesVoluntariado upload = postSnapshot.getValue(AcoesVoluntariado.class);
-
-                    if(upload.getCategoria().equals("Oceanos")){
-                    mUploads.add(upload); }
-
-
+                    //if(upload.getCategoria().equals("Oceanos") && upload.getEstado().equals("A decorrer")){
+                    mUploads.add(upload);
+                //}
                 }
 
                 mAdapter = new AdapterVer(OceanosActivity.this, mUploads, this);

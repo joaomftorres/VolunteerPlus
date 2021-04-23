@@ -90,11 +90,11 @@ public class LoginActivity extends AppCompatActivity {
                                 //startActivity(new Intent(getApplicationContext(), InstitutionActivity.class));
                         }
                         else{
-                            Toast.makeText(LoginActivity.this, "nah fam", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Palavra passe errada, tente de novo!", Toast.LENGTH_SHORT).show();
                         }
                     }
                 } else {
-                    Toast.makeText(LoginActivity.this, "não tá cá", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Utilizador não encontrado!", Toast.LENGTH_SHORT).show();
                 }
             }
 

@@ -76,10 +76,12 @@ public class VerInfoAcaoActivity extends AppCompatActivity {
         visitar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (url.equals("https//:")) {
+                //if (url.equals("https//:")) {
+                if (url != null) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
-                startActivity(intent); }
+                startActivity(intent);
+                }
                 else {
                     Toast.makeText(getApplicationContext(), "Link da Ação não atribuído", Toast.LENGTH_LONG).show();
                 }
@@ -89,7 +91,8 @@ public class VerInfoAcaoActivity extends AppCompatActivity {
         visitarinst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (urlinst.equals("https//:")) {
+                //if (urlinst.equals("https//:")) {
+                if (url != null) {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(urlinst));
                 startActivity(intent); }

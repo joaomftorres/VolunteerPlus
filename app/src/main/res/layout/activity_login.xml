@@ -29,7 +29,7 @@
         android:drawableStart="@drawable/custom_email_icon"
         android:drawablePadding="12dp"
         android:ems="10"
-        android:hint="@string/emailhint"
+        android:hint="Nome de Utilizador"
         android:inputType="textEmailAddress"
         android:paddingStart="12dp"
         app:layout_constraintEnd_toEndOf="parent"

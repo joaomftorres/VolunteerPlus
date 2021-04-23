@@ -52,7 +52,10 @@ public class InstitutionActivity extends AppCompatActivity implements Navigation
        if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new PerfilInstFragment()).commit();
-            navigationView.setCheckedItem(R.id.nav_Perfil);
+            navigationView.setCheckedItem(R.id.nav_lista);
+            //navigationView.getMenu().findItem(R.id.nav_lista).setVisible(true);
+           getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                   new AcoesPropostasFragment()).commit();
         }
 
 

@@ -41,7 +41,7 @@
         android:background="@drawable/custom_edittext"
         android:drawablePadding="12dp"
         android:ems="10"
-        android:hint="@string/namehint"
+        android:hint="Nome de utilizador"
         android:inputType="text|textEmailAddress"
         android:paddingStart="12dp"
         app:layout_constraintEnd_toEndOf="parent"
